@@ -1,20 +1,17 @@
 const jsonServer = require("json-server");
 const server = jsonServer.create();
-const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
+const router = jsonServer.router("db.json");
+const port = 3001;
 
 server.use(middlewares);
-// Add this before server.use(router)
 server.use(
   jsonServer.rewriter({
-    "/api/*": "/$1",
-    "/pizzaItems/:resource/:id/show": "/:resource/:id",
+    "/pizzaItems/:id/": "/:id",
   })
 );
 server.use(router);
-server.listen(3001, () => {
-  console.log("JSON Server is running");
-});
+server.listen(port);
 
 // Export the Server API
 module.exports = server;
