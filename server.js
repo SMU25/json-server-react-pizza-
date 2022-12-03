@@ -7,7 +7,7 @@ const port = 3001;
 server.use(middlewares);
 server.use(
   jsonServer.rewriter({
-    "/pizzaItems/:id/": "/:id",
+    "/pizzaItems/:resource/:id/show": "/:resource/:id",
   })
 );
 server.use(router);
