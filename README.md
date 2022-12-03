@@ -1,4 +1,4 @@
-## Deployed: [https://server-react-pizza.vercel.app/](server-react-pizza)
+## Deployed: [server-react-pizza](https://server-react-pizza.vercel.app/)
 
 # Json Server for React Pizza
 
